@@ -1,0 +1,475 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+li {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* index */
+.bar_content {
+    display: flex;
+    flex-direction: row;
+}
+
+.side_bar {
+    color: white;
+    margin: 12vh 0 0 50px;
+    padding: 25px 50px 0 0;
+    border-right: white 1px solid;
+}
+
+.side_bar img {
+    width: 160px;
+    margin: 0 0 10px 0;
+    border-radius: 10px;
+    border: transparent 3px solid;
+}
+
+.side_bar p {
+    font-size: 12px;
+    line-height: 2em;
+}
+
+.side_bar h1 {
+    font-size: 20px;
+    margin: 0 0 0 25px;
+}
+
+.img_text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.img_text img {
+    position: absolute;
+    top: 3px;
+    left: -1px;
+    width: 20px;
+    border: white 1.5px solid;
+}
+
+.personal_info {
+    margin: 0 0 20px 0;
+}
+
+.personal_info p {
+    padding-left: 5px;
+    border-left: white 1px solid;
+    border-bottom: white 1.5px solid;
+    border-radius: 5px;
+    box-shadow: 3px 5px 16px rgba(255, 255, 255, 0.2);
+}
+
+.personal_info a {
+    display: inline;
+    font-size: 12px;
+    line-height: 2em;
+    color: white;
+    text-decoration: none;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    border-left: white 1px solid;
+    border-bottom: white 1.5px solid;
+    border-radius: 5px;
+    box-shadow: 3px 5px 16px rgba(255, 255, 255, 0.2);
+}
+
+.index {
+    background-color: black;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.7);
+    height: 12vh;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    color: white;
+    position: absolute;
+    left: 50px;
+    top: 0;
+    line-height: 80px;
+    cursor: default;
+    /* background-image: url(images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    text-indent: -9999px; */
+}
+
+header h1::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 50%;
+    bottom: 20px;
+    height: 1px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    animation: underlineloop 60s infinite linear;
+}
+
+header h1:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+@keyframes underlineloop {
+    0% {
+        width: 0;
+        left: 0;
+    }
+
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+header li {
+    display: inline;
+    margin-right: 2vw;
+    font-size: larger;
+}
+
+header a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+}
+
+header a:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+header a:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+}
+
+.intro_inset_shadow {
+    box-shadow: inset 0px -25px 15px rgba(255, 255, 255, 1);
+    z-index: 1000;
+}
+
+.intro {
+    background-color: black;
+    color: white;
+    margin-top: 12vh;
+    height: 88vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/eg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    box-shadow: inset ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.intro h2 {
+    font-size: 30px;
+    margin: -10px 0 0 0;
+}
+
+.intro p {
+    color: white;
+    font-size: 19px;
+    line-height: 1.4em;
+}
+
+.intro li {
+    color: white;
+    font-size: 19px;
+    line-height: 1.4em;
+}
+
+.intro a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #acacac;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+    font-size: 16px;
+}
+
+.intro a:hover {
+    border: 2px solid #acacac;
+    transform: scale(1.05);
+}
+
+.info_card {
+    border: white 2px solid;
+    border-radius: 10px;
+    margin: 2vh 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.info_card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.info_card .bio {
+    text-align: justify;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.education .university {
+    font-weight: bold;
+}
+
+.education .period {
+    color: rgb(173,173,173);
+}
+
+.education a {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.education a:hover {
+    border: none;
+}
+
+.edu_img_text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.edu_img_text img {
+    width: 75px;
+    margin: 3px 15px 0 0;
+}
+
+.work_experience ul {
+    margin: 0 17px;
+}
+
+.work_experience .position {
+    font-weight: bold;
+}
+
+.work_experience .period{
+    color: rgb(173,173,173);
+}
+
+.work_experience .location{
+    color: rgb(173, 173, 173);
+}
+
+.work_img_text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    margin: 10px 0 0 0;
+    padding: 0 0 5px 0;
+}
+
+.work_img_text .info {
+    padding: 0 10px 0 0;
+    border-right: rgba(173, 173, 173, 0.3) 3px dashed;
+}
+
+.work_img_text .tech_stack_text {
+    padding: 0 0 0 10px;
+    align-self: self-start;
+    font-weight: bold;
+}
+
+.work_img_text .tech_stack_img {
+    width: 75px;
+    margin: 3px 10px 0 10px;
+    border-radius: 5px;
+}
+
+.work_img_text a {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.work_img_text a:hover {
+    border: none;
+}
+
+.work_img_text .company_logo {
+    width: 75px;
+    margin: 3px 15px 0 0;
+    border-radius: 5px;
+    border: white 1px solid;
+}
+
+.teaching_experience {
+    display: flex;
+    flex-direction: column;
+}
+
+.teaching_experience ul {
+    margin: 0 17px;
+}
+
+.slogan {
+    background-color: #485652;
+    color: white;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.8em;
+}
+
+footer {
+    background-color: #000000;
+    color: #b7b7b7;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.pic_and_text {
+    display: flex;
+}
+
+.pic_and_text img {
+    width: 50%;
+}
+
+.pic_and_text div {
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.pic_and_text div h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.pic_and_text div p {
+    text-align: center;
+    line-height: 2em;
+}
+
+/* gallery */
+
+.gallery {
+    background-color: #2a2a2a;
+}
+
+.gallery header {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.cards {
+    margin: 15vh 12vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    margin: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover img {
+    border: 3px solid white;
+}
+
+.card h2 {
+    color: white;
+    font-size: medium;
+    margin: 10px 0;
+}
