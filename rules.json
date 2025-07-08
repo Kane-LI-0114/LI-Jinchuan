@@ -1,0 +1,24 @@
+{
+  "rules": [
+    {
+      "id": 1,
+      "title": "总是使用中文回答问题",
+      "description": "在任何情况下，回答用户提问时都应该使用中文",
+      "details": [
+        "保持语言的一致性和专业性",
+        "确保中文表达准确、清晰",
+        "使用适当的专业术语"
+      ],
+      "priority": "高",
+      "category": "语言规范",
+      "enabled": true
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "created_date": "2025-07-08",
+    "last_updated": "2025-07-08",
+    "author": "开发团队",
+    "description": "GitHub Copilot 规则配置文件"
+  }
+}
