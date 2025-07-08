@@ -178,37 +178,54 @@
         <p>Copyright © 2025 LI Jinchuan All rights reserved.</p>
     </footer>
     <script>
+        /*
+        // 3D卡片鼠标跟随效果 - 暂时禁用
         document.addEventListener('DOMContentLoaded', () => {
-            // 获取所有卡片元素（使用querySelectorAll）
+            // 等待DOM完全加载后执行，确保所有HTML元素都已渲染完成
+            
+            // 获取页面中所有具有 'info_card' 类名的卡片元素
             const cards = document.querySelectorAll('.info_card');
 
-            // 为每张卡片单独添加事件监听
+            // 遍历每张卡片，为每张卡片单独添加鼠标事件监听器
             cards.forEach(card => {
+                // 监听鼠标在卡片上移动的事件
                 card.addEventListener('mousemove', (e) => {
+                    // 获取卡片相对于视口的位置和尺寸信息
                     const rect = card.getBoundingClientRect();
+                    
+                    // 计算鼠标相对于卡片中心的归一化坐标（范围: -1 到 1）
                     const x = (e.clientX - rect.left) / rect.width * 2 - 1;
                     const y = (e.clientY - rect.top) / rect.height * 2 - 1;
 
-                    // e.clientX - rect.left → 鼠标相对于卡片左边缘的X坐标
-                    // / rect.width → 归一化为 0~1 范围
-                    // * 2 - 1 → 转换为 -1~1 范围（0表示卡片中心）
+                    // 坐标计算说明：
+                    // e.clientX - rect.left → 鼠标相对于卡片左边缘的X坐标（像素）
+                    // / rect.width → 将坐标归一化为 0~1 范围（0=左边缘，1=右边缘）
+                    // * 2 - 1 → 转换为 -1~1 范围（-1=左边缘，0=中心，1=右边缘）
 
                     // x: 水平方向比例（-1=最左，0=中心，1=最右）
                     // y: 垂直方向比例（-1=顶部，0=中心，1=底部）
 
+                    // 根据鼠标位置应用3D变换效果
+                    // 注意：这里的rotateX和rotateY在视觉上是相反的
+                    // rotateX控制围绕X轴的旋转（上下倾斜），使用x坐标（水平位置）
+                    // rotateY控制围绕Y轴的旋转（左右倾斜），使用y坐标（垂直位置）
                     card.style.transform = `
-                    rotateX(${x * 3}deg)
-                    rotateY(${y * 3}deg)
-                    translateX(${x * 3}px)
-                    translateY(${y * 3}px)
+                        rotateX(${x * 3}deg)      
+                        rotateY(${y * 3}deg)      
+                        translateX(${x * 3}px)    
+                        translateY(${y * 3}px)    
                     `;
+                    // 每个变换效果乘以3，控制效果强度（数值越大效果越明显）
                 });
 
+                // 监听鼠标离开卡片的事件
                 card.addEventListener('mouseleave', () => {
+                    // 重置卡片变换，恢复到原始状态
                     card.style.transform = 'none';
                 });
             });
         });
+        */
     </script>
 </body>
 
