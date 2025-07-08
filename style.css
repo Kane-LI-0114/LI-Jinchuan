@@ -438,14 +438,15 @@ footer {
 }
 
 .cards {
-    margin: 15vh 12vh;
+    margin: 18vh 12vh 0 12vh;
+    height: 88vh;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自动调整列数，每列最小300px，卡片数量不足时自动居中 */
+    gap: 50px;
+    justify-items: center; /* 控制每个卡片在其网格单元格内的水平对齐方式 */
 }
 
 .card {
-    margin: 10px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
