@@ -442,7 +442,7 @@ footer {
     height: 88vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自动调整列数，每列最小300px，卡片数量不足时自动居中 */
-    gap: 50px;
+    gap: 0px 20px; /* 设置行与行、列与列之间的间距 */
     justify-items: center; /* 控制每个卡片在其网格单元格内的水平对齐方式 */
 }
 
@@ -450,7 +450,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
+    width: 100%;
+    max-width: 300px; /* 限制卡片的最大宽度 */
     height: auto;
     cursor: pointer;
 }
