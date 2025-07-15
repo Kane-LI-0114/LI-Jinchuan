@@ -1,3 +1,26 @@
+/* 
+=== 颜色系统 ===
+Primary Colors:
+- #007bff (蓝色)
+- #6c757d (灰色)
+- #28a745 (绿色)
+- #dc3545 (红色)
+
+Background Colors:
+- rgba(0, 0, 0, 0.3) (半透明黑色)
+- rgba(255, 255, 255, 0.2) (半透明白色)
+
+=== 尺寸系统 ===
+Margins: 0, 10px, 20px, 50px
+Paddings: 0, 5px, 10px, 20px, 25px
+Border Radius: 5px, 10px
+Font Sizes: 12px, 14px, 16px, 19px, 20px, 30px
+
+=== 常用过渡效果 ===
+transition: all 0.3s ease-in-out
+transition: transform 0.2s ease-in-out
+*/
+
 * {
     padding: 0;
     margin: 0;
@@ -22,13 +45,19 @@ li {
 /* index */
 .bar_content {
     display: flex;
+    width: 100vw;
     flex-direction: row;
+}
+
+.main_content {
+    width: 88vw;
 }
 
 .side_bar {
     color: white;
-    margin: 12vh 0 0 50px;
-    padding: 25px 50px 0 0;
+    margin: 12vh 0 0 0;
+    padding: 25px 50px 0 50px;
+    width: 12vw;
     border-right: white 1px solid;
 }
 
