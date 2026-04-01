@@ -408,6 +408,19 @@ header ul {
     margin: 0 17px;
 }
 
+.project_experience {
+    display: flex;
+    flex-direction: column;
+}
+
+.project_experience .position {
+    font-weight: bold;
+}
+
+.project_experience .period {
+    color: rgb(173, 173, 173);
+}
+
 .slogan {
     background-color: #485652;
     color: white;
